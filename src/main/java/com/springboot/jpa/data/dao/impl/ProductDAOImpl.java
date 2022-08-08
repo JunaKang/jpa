@@ -31,7 +31,7 @@ public class ProductDAOImpl implements ProductDAO {
     //예제 6.11
     @Override
     public Product selectProduct(Long number){
-        Product selectedProduct = productRepository.getById(number);
+        Product selectedProduct = productRepository.getReferenceById(number);
 
         return selectedProduct;
     }

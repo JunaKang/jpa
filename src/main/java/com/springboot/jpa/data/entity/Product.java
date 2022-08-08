@@ -1,14 +1,23 @@
 package com.springboot.jpa.data.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "product")
 public class Product {
 
     @Id
-    @GeneratedValue( strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long number;
 
     @Column(nullable = false)
@@ -23,5 +32,4 @@ public class Product {
     private LocalDateTime createdAt;
 
     private LocalDateTime updatedAt;
-
 }
